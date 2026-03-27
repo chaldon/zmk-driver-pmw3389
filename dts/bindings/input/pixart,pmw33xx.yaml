@@ -9,7 +9,7 @@ include: spi-device.yaml
 properties:
   label:
     type: string
-    required: true
+    required: false
   cs-gpios:
     type: phandle-array
     required: true

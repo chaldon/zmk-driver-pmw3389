@@ -10,7 +10,7 @@ include: spi-device.yaml
 properties:
   label:
     type: string
-    required: true
+    required: false
   irq-gpios:
     type: phandle-array
     required: true
