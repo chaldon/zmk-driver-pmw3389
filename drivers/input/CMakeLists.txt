@@ -4,7 +4,7 @@
 zephyr_include_directories(.)
 zephyr_include_directories_ifdef(CONFIG_PMW33XX_3389 CONFIG_PMW33XX_3389_SROM_INCLUDE_DIR)
 
-ephyr_library_amend())
+ephyr_library_amend()
 
 zephyr_library_sources(pmw33xx.c)
 zephyr_library_sources_ifdef(CONFIG_PMW33XX_TRIGGER pmw33xx_trigger.c)
