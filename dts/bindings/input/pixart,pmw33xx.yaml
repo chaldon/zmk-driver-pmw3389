@@ -10,10 +10,11 @@ properties:
   label:
     type: string
     required: false
-  cs-gpios:
-    type: phandle-array
-    required: true
-    description: chip select pin for the sensor
+  #It should come from SPI
+  #cs-gpios:
+  #  type: phandle-array
+  #  required: true
+  #  description: chip select pin for the sensor
   motswk-gpios:
     type: phandle-array
     required: false
