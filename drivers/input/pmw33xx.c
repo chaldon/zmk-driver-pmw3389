@@ -7,8 +7,8 @@
 
 #include <zephyr/drivers/spi.h>
 #include <errno.h>
-#include <device.h>
-#include <drivers/gpio.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/gpio.h>
 #include <sys/util.h>
 #include <sys/byteorder.h>
 #include <kernel.h>

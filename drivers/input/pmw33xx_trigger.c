@@ -6,11 +6,11 @@
 
 #define DT_DRV_COMPAT pixart_pmw33xx
 
-#include <device.h>
-#include <drivers/gpio.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/gpio.h>
 #include <sys/util.h>
 #include <kernel.h>
-#include <drivers/sensor.h>
+#include <zephyr/drivers/sensor.h>
 
 #include "pmw33xx.h"
 
