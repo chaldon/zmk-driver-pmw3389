@@ -13,7 +13,7 @@
 #include <zephyr/sys/byteorder.h>
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/sensor.h>
-#include <sys/__assert.h>
+#include <zephyr/sys/__assert.h>
 #include <logging/log.h>
 #ifdef CONFIG_PMW33XX_3389
 #include "pmw3389_srom.h"

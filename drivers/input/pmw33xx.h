@@ -9,7 +9,7 @@
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/types.h>
 #include <zephyr/drivers/gpio.h>
-#include <sys/util.h>
+#include <zephyr/sys/util.h>
 #include <zephyr/drivers/spi.h>
 
 /* wr/rd mask */
