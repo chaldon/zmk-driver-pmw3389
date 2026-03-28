@@ -358,7 +358,7 @@ static int pmw33xx_init_chip(const struct device *dev) {
         return -EIO;
     }
     LOG_INF("pmw33xx SROM firmware id: %d", srom_id);
-    if (srom_id != PMW3360_FIRMWARE_ID) {
+    if (srom_id != PMW33XX_FIRMWARE_ID) {
         LOG_ERR("srom id invalid %d", srom_id);
         return -EIO;
     }
