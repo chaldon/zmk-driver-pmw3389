@@ -400,7 +400,7 @@ static int pmw33xx_init(const struct device *dev) {
 
     data->bus = device_get_binding(config->bus_name);
     if (!data->bus) {
-        LOG_DBG("master not found: %s", log_strdup(config->bus_name));
+        LOG_DBG("master not found: %s", config->bus_name);
         return -EINVAL;
     }
 
