@@ -122,12 +122,18 @@ int pmw33xx_init_interrupt(const struct device *dev) {
 
     // create the handler thread or work
 #if defined(CONFIG_PMW33XX_TRIGGER_OWN_THREAD)
+    #ifdef IS_ENABLED(CONFIG_SENSOR_LOG_LEVEL_DBG)
+        LOG_DBG("Using own thread");
+    #endif
     k_sem_init(&drv_data->gpio_sem, 0, UINT_MAX);
 
     k_thread_create(&drv_data->thread, drv_data->thread_stack, CONFIG_PMW33XX_THREAD_STACK_SIZE,
                     (k_thread_entry_t)pmw33xx_thread, dev, 0, NULL,
                     K_PRIO_COOP(CONFIG_PMW33XX_THREAD_PRIORITY), 0, K_NO_WAIT);
 #elif defined(CONFIG_PMW33XX_TRIGGER_GLOBAL_THREAD)
+    #ifdef CONFIG_SENSOR_LOG_LEVEL_DBGIS_ENABLED(CONFIG_SENSOR_LOG_LEVEL_DBG)
+        LOG_DBG("Using global thread");
+    #endif
     k_work_init(&drv_data->work, pmw33xx_work_cb);
 #endif
 

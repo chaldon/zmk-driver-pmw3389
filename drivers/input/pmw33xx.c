@@ -415,10 +415,17 @@ static int pmw33xx_init(const struct device *dev) {
 
 
 #ifdef CONFIG_PMW33XX_TRIGGER
+    #ifdef IS_ENABLED(CONFIG_SENSOR_LOG_LEVEL_DBG)
+        LOG_DBG("Using interrupt");
+    #endif
     if (pmw33xx_init_interrupt(dev) < 0) {
         LOG_DBG("Failed to initialize interrupt!");
         return -EIO;
     }
+#else
+    #ifdef IS_ENABLED(CONFIG_SENSOR_LOG_LEVEL_DBG)
+        LOG_DBG("Using polling");
+    #endif
 #endif
 
     return 0;
